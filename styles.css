@@ -4,11 +4,26 @@ body {
     font-family: sans-serif;
 }
 
-pulse {
-    background: none;
-    color: #ff760c;
-    border: 2px solid;
-    margin: 50px;
-    padding: 15px 40px;
-    transition: 0.25s;
+.pulse {
+    background: none; /*é um atalho para definir os valores de fundo individuais em um único lugar na folha de estilo*/
+    color: #ff760c; /*Utilizamos essa propriedade para alterar a cor do plano de fundo, seja de um elemento ou do documento como um todo.*/
+    border: 2px solid;/* é uma propriedade que adiciona um contorno em volta de um elemento HTML*/
+    margin: 50px; /* é uma propriedade utilizada para adicionar um distanciamento na parte externa, ao redor do elemento*/
+    padding: 15px 40px; /*padding é responsável por definir uma distância interna entre um elemento e sua borda*/
+    transition: 0.25s;/* Na prática, ele permite criar animações sem a necessidade de escrever código JavaScript ou de utilizar recursos externos.*/
+}
+
+.pulse:hover, .pulse:focus {
+    color: #FFF;
+    border-color: #ef8f6e;
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    animation: pulsar 1s;
+
+}
+
+@keyframes pulsar {
+     
+     0% {
+        box-shadow: 0 0 0 0 #ef8f6e;
+    }
 }
